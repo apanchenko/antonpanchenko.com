@@ -1,8 +1,9 @@
-# gatsby-starter-blog
-Gatsby starter for creating a blog
-
-Install this starter (assuming Gatsby is installed) by running from your CLI:
-`gatsby new gatsby-blog https://github.com/gatsbyjs/gatsby-starter-blog`
+# apanchenko
+My personal photo blog (react training sandbox) powered by Gatsby.
 
 ## Running in development
 `gatsby develop`
+
+## Build production in public folder
+`gatsby build`
+
