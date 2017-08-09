@@ -1,0 +1,9 @@
+---
+title: Holidays
+date: "2017-08-08"
+path: "/2017-08-08-holidays/"
+---
+
+![Lounge chairs](./P8090248.jpg)
+
+My friend, you probably work five days a week, as I do. Sometimes I wait for a weekend as if it will bring me eternal relief. But weekends come and go and the story repeats. Holiday is not a day free of the job. It is a chance to step forward. Work as your heart does.
