@@ -1,7 +1,6 @@
 import React from "react"
 import Link from "gatsby-link"
 import { Container } from "react-responsive-grid"
-
 import { rhythm, scale } from "../utils/typography"
 
 class Template extends React.Component {
@@ -65,7 +64,7 @@ class Template extends React.Component {
 }
 
 Template.propTypes = {
-  children: React.PropTypes.function,
+  children: React.PropTypes.func,
   location: React.PropTypes.object,
   route: React.PropTypes.object,
 }
