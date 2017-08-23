@@ -1,0 +1,279 @@
+---
+title: Machine Learning notes
+date: "2017-08-24"
+path: "/2017-08-24-ml-notes/"
+---
+![Ocean waves](./3732.jpg)
+
+Here are notes I have made passing [Machine Learning](https://www.coursera.org/learn/machine-learning) course by Andrew Ng. I doubt it may be helpful to anybody. You may have your own notes, after all. But I found so much splendor in these formulas and have to share. All is markdown, made in *Sublime3* with the help of [UnicodeMath](https://github.com/mvoidex/unicodemath) package. Some edits made in *VS Code* with similar *Unicode Latex* extension.
+
+# LEGEND
+	X - features
+	y - labels
+	m - number of training examples
+	n - number of features
+	J - cost function
+	ϴ - model parameters
+	α - learning rate
+	L - number of layers in NN
+	h - hypothesis function (X, ϴ)
+	d - degree of polynomial h
+	λ - regularization parameter
+	P - classification precision
+	R - classification error
+	z = ϴ'X
+	l - SVM landmark
+
+# LINEAR REGRESSION
+## Cost function
+```
+        1     m                  n
+J(ϴ) = ——— m (∑  (h(xᵢ)-yᵢ)² + λ ∑  ϴⱼ²)
+        2     i=1                j=2
+```
+## Training
+```
+           ∂J           1   m
+ϴ = ϴ - α ———— = ϴ - α ——— (∑  (h(xᵢ)-yᵢ)xᵢ + λϴ), where x0 = 1, λ0 = 0
+           ∂ϴ           m   i=1
+```
+- scale features to similar range
+- convergence if J decreases by less than 1e-3 in one iteration
+- if J increases use smaller α
+
+# CLASSIFICATION
+## Cost
+```
+          1   m
+J(ϴ) = - ———  ∑  (yᵢ log(h) + (1 - yᵢ) log(1 - h))
+          m   i=1
+```
+## Test error
+```
+   1   m_test
+—————— ∑      error(h(xᵢ), yᵢ), where error=(classification correct ? 1 : 0)
+m_test i=1
+```
+## Skewed data classification
+- y = 1 is rare class
+- Accuracy = (true positives + true negatives) / (total examples)
+- Precision (P) = true positives / predicted positives = true pos / (true pos + false pos)
+- Recall (R) = true positives / actual positives = true pos / (true pos + false neg)
+- avoid false positives y = 0 if h < 0.9 -> higher precision, lower recall
+- avoid false negatives y = 0 if h < 0.1 -> higher recall, lower precision
+- use F1Score = 2PR/(P+R) for single algorithm measure, higher is better
+
+none	| real 1  | real 0
+--------|---------|--------		
+class 1	| tp	  | fp
+class 0	| fn	  | tn
+
+# NEURAL NETWORK
+1. Randomly initialize the weights
+2. Implement forward propagation to get hΘ(x(i)) for any x(i)
+3. Implement the cost function
+4. Implement backpropagation to compute partial derivatives
+5. Use gradient checking to confirm that your backpropagation works. Then disable gradient checking.
+6. Use gradient descent or a built-in optimization function to minimize the cost function with the weights in theta.
+
+# BIAS vs VARIANCE
+- high bias = underfit
+- high variance = overfit
+
+## Ways to improve:
+- more training examples   - fix high variance (overfit)
+- smaller sets of features - fix high variance
+- more features            - fix high bias (underfit)
+- try polynomial features  - fix high bias
+- decrease λ               - fix high bias
+- increase λ               - fix high variance
+- NN more layers           - fix high variance
+
+## Model selection:
+1. split data to {training, cross validation(cv), test} sets (60%/20%/20%)
+2. optimize ϴ for various parameters (d, λ) on training set
+3. select best parameters on cross validation set without regularization
+4. estimate error on test set
+5. normally `J_cv < J_test`
+
+## Bias vs variance:
+- high bias: `J_train ~ J_cv` high
+- high variance: `J_train << J_cv`, `J_train << J_test`
+
+## regularization λ selection:
+- J_cv without regularization
+- minimize J_cv for various λ
+
+## learning curves:
+- with increasing m, J_train increases, J_cv decreases, asimptotically same
+- if HIGH BIAS more train data will not help
+- if HIGH VARIANCE more data will help
+
+# ML SYSTEM DESIGN
+- lots of data
+- sophysticated features
+- process input in different ways
+- start with simple algorithm
+- plot learning curves to decide if more data, more features, etc may help
+- manually examine some erroneous examples in CV set to observe how to improve features
+
+# SVM (support vector machine: liblinear, libsvm)
+## Hypothesis
+	h(X) = {1 if ϴ'Xi>=0, 0 otherwise}
+## Cost
+```
+      m                                             1  n
+J = C ∑  (yᵢ cost1(ϴ'Xi) + (1 - yᵢ) cost0(ϴ'Xᵢ)) + ——— ∑  ϴⱼ²
+      i=1                                           2  j=2
+```
+## Similarity function
+- Gaussian kernel: `f(x, l) = exp(- ||x - l||² / 2∑²)`
+- Polynomial kernel: `k(x, l) = (x'l + constant)ᵈᵉᵍʳᵉᵉ`
+- y = ϴ'f, take lᵢ = xᵢ
+- J = C ∑{i=1:m}(yᵢ cost1(ϴ'fᵢ) + (1 - yᵢ) cost0(ϴ'fᵢ)) + 1/2 ∑{j=2:n}(ϴⱼ²)
+- n == m
+- 1/2 ∑{j=2:n}(ϴj²) -> ϴ'ϴ -> ϴ'Mϴ
+- C = 1/λ
+- Larger C: lower bias, high variance
+- Smaller C: Higher bias, low variance
+- Large ∑²: features smoothly, higher bias, lower variance
+- Kernel need to satisfy Mercer's Theorem
+
+# UNSUPERVISED LEARNING
+- K - number of clusters
+- training set {xᵢ}, xᵢ ∈ ℝⁿ
+
+## K-Means algorithm
+	randomly init K cluster centroids μ₁...μK ∈ Rⁿ
+	repeat
+		for i=1:m 			% cluster assignment step
+			c⁽ⁱ⁾ = index of cluster centroid closest to x⁽ⁱ⁾
+		for k=1:K 			% move centroid step
+			μₖ = avarage of points assigned to cluster k
+
+### Optimization objective (distortion cost-function)
+- μcⁱ - cluster centroid of cluster to which x⁽ⁱ⁾ assigned
+- J(c⁽¹⁾...c⁽ᵐ⁾,μ₁...μK) = 1/m ∑[i=1:m]||x⁽ⁱ⁾ - μcⁱ||²
+
+### Random initialization
+1. Should have K < m, select K by elbow method (J(K)) or from task logic
+2. Randomly pick K training examples
+3. Set μ₁...μK equal to these K examples
+4. Try multiple starting initializations
+
+code:
+
+	for i = 1 to 100 			% 50...1000
+		randomly init K-means
+		run K-means: get c⁽¹⁾...c⁽ᵐ⁾,μ₁...μK
+		compute cost function
+
+## Dimensionality reduction
+Project all data {x⁽¹⁾...x⁽ᵐ⁾}∈ℝⁿ onto hyperplane and get {z⁽¹⁾...z⁽ᵐ⁾}∈ℝᵏ, k < n. Mapping x⁽ⁱ⁾⟶ z⁽ⁱ⁾ should be defined by PCA only on training set. This mapping can be applied as well to cv and test sets.
+
+### Principal Component Analysis (PCA)
+Select hyperplane defined by k vectos u⁽¹⁾...u⁽ᵏ⁾ with minimal projection error.
+1. Normalize features (mean and scale)
+2. Compute covariance matrix `∑ = 1/m ∑{i=1:m}(x⁽ⁱ⁾)(x⁽ⁱ⁾)ᵀ` which is n*n matrix. In octave `X = [x⁽¹⁾ᵀ;...;x⁽ᵐ⁾ᵀ]; Sigma = (1/m) * X' * X;`
+3. Compute eigenvectors of ∑. In octave `[U,S,V] = svd(∑);`
+4. `U = [u⁽¹⁾...u⁽ⁿ⁾] ∈ℝⁿˣⁿ`
+5. `Uᵣ= [u⁽¹⁾...u⁽ᵏ⁾] ∈ℝⁿˣᵏ` use first k columns from U
+6. `z = Uᵣᵀx ∈ℝᵏ`
+- Bad use of PCA: to prevent overfitting
+
+#### Choosing k (number of principal components)
+- avarage squared projection error `E = 1/m ∑{i=1:m}||x⁽ⁱ⁾-x_approx⁽ⁱ⁾||²`
+- total variation `V = 1/m ∑{i=1:m}||x⁽ⁱ⁾||²`
+- choose k to be smallest so that `E / V ≤ 0.01` - 99% of variance retained (90% - 99%)
+- from `[U,S,V] = svd(∑);` S is a diagonal `∑{i=1:k}Sᵢᵢ / ∑{i=1:n}Sᵢᵢ ≥ 0.99`
+
+
+## Anomaly detection
+1. Choose features xᵢ
+2. `μⱼ = 1/m ∑{i=1:m}xⱼ⁽ⁱ⁾` `∑ⱼ² = 1/m ∑{i=1:m}(xⱼ⁽ⁱ⁾ - μⱼ)²`
+3. For new example compute `p(x) = Π{j=1:n}p(xⱼ, μⱼ, ∑ⱼ²) = Π{j=1:n} 1/(√(2π)∑ⱼ)exp(- (jⱼ - μⱼ)²/2∑ⱼ²)`
+4. Anomaly if `p(x) < ε`
+5. Use precision/recall and F1score.
+6. Use CV set to choose ε.
+
+### Anomaly detection vs. Supervised learning
+y = 1 (positive) - anomaly
+y = 0 (negative) - normal
+Anomaly detection: 
+- Small number of positive or large number of negative examples.
+- future anomalies may look nothing like any of anomalous examples we have
+Supervised learning
+- large number of positive and negative examples
+- enough positive ex, for algorithm to get a gense of what positive examples are like.
+
+### Anomaly detection feature selection
+1. Plot histogram and transform feature to look more gaussian
+2. Add combined features that might take extreme values for anomaly
+
+## Multivariate gaussian distribution
+x∈ℝⁿ. Don't model p(x₁)p(x₂).. separately, model p(x) all in one go.
+```
+                   1
+p(x,μ,∑) = ———————————————————— exp(- 1/2 (x - μ)ᵀ ∑⁻¹ (x - μ))
+           (2π)^(n/2) |∑|^(1/2)
+```
+
+## Recommender systems
+### Content based approach
+        nᵤ - number of users
+        nₘ - number of movies
+        r(ij) = 1 if user j has rated movie i
+        y⁽ⁱʲ⁾ = rating given by user j to movie i
+        Θ⁽ʲ⁾ = parameter vector for user j
+        x⁽ⁱ⁾ = feature vector for movie i
+        m⁽ʲ⁾ = number of movies rated by user j
+For user j learn a parameter Θ⁽ʲ⁾∈ℝ. User j rates movie i with `(Θ⁽ʲ⁾)ᵀx⁽ⁱ⁾`.
+Given x, estimate Θ⁽ʲ⁾ is _leanear regression problem_:
+```
+                    1                                 λ  nᵤ  n
+min(Θ⁽¹⁾..Θ⁽ⁿᵘ⁾) = ——— ∑      (Θ⁽ʲ⁾ᵀx⁽ⁱ⁾ - y⁽ⁱʲ⁾)² + ——— ∑   ∑ (Θ⁽ⁱ⁾ₖ)² 
+                    2  r(ij)=1                        2  j=1 k=1
+```
+### Collaborative filtering
+Given Θ, estimate x:        
+```
+                    1                                 λ  nₘ  n
+min(x⁽¹⁾..x⁽ⁿᵘ⁾) = ——— ∑      (Θ⁽ʲ⁾ᵀx⁽ⁱ⁾ - y⁽ⁱʲ⁾)² + ——— ∑   ∑  (x⁽ⁱ⁾ₖ)² 
+                    2  r(ij)=1                        2  j=1 k=1
+```
+Do optimizations Θ -> x -> Θ -> x ...
+Minimize Θ and x simultaneously:
+```
+          1                               λ  nᵤ n            λ  nₘ   n
+J(x,Θ) = ——— ∑  ((Θ⁽ʲ⁾)ᵀx⁽ⁱ⁾ - y⁽ⁱʲ⁾)² + ——— ∑  ∑(Θ⁽ʲ⁾ₖ)² + ——— ∑   ∑  (x⁽ⁱ⁾ₖ)² 
+          2  r(ij)=1                      2  j=1 k=1         2  j=1 k=1
+
+  ∂J
+—————— = ∑      ((Θ⁽ʲ⁾)ᵀx⁽ⁱ⁾ - y⁽ⁱʲ⁾)Θ⁽ʲ⁾ₖ + λx⁽ⁱ⁾ₖ
+∂x⁽ⁱ⁾ₖ   r(ij)=1
+
+  ∂J
+—————— = ∑      ((Θ⁽ʲ⁾)ᵀx⁽ⁱ⁾ - y⁽ⁱʲ⁾)x⁽ⁱ⁾ₖ + λΘ⁽ʲ⁾ₖ
+∂Θ⁽ʲ⁾ₖ   r(ij)=1
+```
+1. Initialize x, Θ to small random values
+2. Minimize J for every j=1..nᵤ, i=1..nₘ.
+3. For a user with parameters Θ and a movie with features x, predict a star rating of Θᵀx.
+
+### Low rank matrix factorization
+For each product i, we learn a feature vector x⁽ⁱ⁾∈ℝⁿ. Find similar product j with smallest `||x⁽ⁱ⁾-x⁽ʲ⁾||`.
+
+# Stochastic gradient descent
+1. Randomly shuffle training examples
+2. Releat `{ for i=1:m Θⱼ = Θⱼ - α(h(x⁽ⁱ⁾) - y⁽ⁱ⁾)x⁽ⁱ⁾ⱼfor every j }`
+
+- batch gradient descent: use all m examples in each iteration
+- stochastic GD: use 1 example in each iteration
+- mini-batch GD: use b examples in each iteration
+
+Slowly decrease α (eg α = Const1 / (iteration + Const2))
+
+# Photo OCR pipeline
+1. Text detection
+2. Character segmentation
+3. Character classification
