@@ -3,7 +3,8 @@ title: Machine Learning notes
 date: "2017-08-24"
 path: "/2017-08-24-ml-notes/"
 ---
-![Ocean waves](./3732.jpg)
+
+![waves](./3732.jpg)
 
 Here are notes I have made passing [Machine Learning](https://www.coursera.org/learn/machine-learning) course by Andrew Ng. I doubt it may be helpful to anybody. You may have your own notes, after all. But I found so much splendor in these formulas and have to share. All is markdown, made in *Sublime3* with the help of [UnicodeMath](https://github.com/mvoidex/unicodemath) package. Some edits made in *VS Code* with similar *Unicode Latex* extension.
 
