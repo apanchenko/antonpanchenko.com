@@ -1,0 +1,21 @@
+.app-header {
+  background-color: #222;
+  height: 4em;
+  padding: 1em;
+  color: white;
+  margin-bottom: 4em;
+}
+
+.app-title {
+  font-size: 1.5em;
+}
+
+.post {
+  margin-bottom: 2em;
+}
+
+.post-img {
+  float: left;
+  margin-right: 1.5em;
+}
+
