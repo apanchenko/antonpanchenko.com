@@ -1,7 +1,9 @@
 import React from 'react';
-import marked from 'marked';
 import Ajax from './ajax.js';
 import blogidx from './blog-index.js';
+
+var md = require('markdown-it')();
+
 
 export default class BlogEntry extends React.Component {
     constructor(props) {
@@ -21,7 +23,7 @@ export default class BlogEntry extends React.Component {
         Ajax.get(
             this.state.entry.filename,
             function (markdown) {
-                this.setState({ __html: marked(this.chopHeader(markdown)) });
+                this.setState({ __html: md.render(this.chopHeader(markdown)) });
             }.bind(this)
         );
     }
@@ -32,19 +34,10 @@ export default class BlogEntry extends React.Component {
     }
 
     render() {
-        var items = [];
-        if (this.state.__html.length > 0) {
-            items.push((
-                <div key="1">
-                    <h1>{this.state.entry.title}</h1>
-                    <div className="blogEntryMarkdown" key="hack" dangerouslySetInnerHTML={this.state} />
-                </div>
-            ));
-        }
-
         return (
             <div className="blogEntryBox">
-                {items}
+                <h1>{this.state.entry.title}</h1>
+                <div className="post-md" dangerouslySetInnerHTML={this.state} />
             </div>
         );
     }
