@@ -1,8 +1,6 @@
 var index = [];
 index['2017-10-16-site'] = {"filename":"/posts/2017-10-07-site-construction.md","path":"2017-10-16-site","date":"2017-10-16","title":"Site construction","img":"posts/2017-10-07-site-construction.jpg","imgalt":"construction of Zaryadye park in Moscow"};
 
-index['2017-10-06-pip-update'] = {"filename":"/posts/2017-10-06-pip-update.md","path":"2017-10-06-pip-update","date":"2017-10-06","title":"ML update","img":"posts/2017-10-06-pip-update.jpg","imgalt":"orca show"};
-
 index['2017-09-Hellblade'] = {"filename":"/posts/2017-09-hellblade.md","path":"2017-09-Hellblade","date":"2017-09","title":"Hellblade","img":"posts/2017-09-hellblade.jpg","imgalt":"girl with tiger paw"};
 
 index['2017-08-28-to-confidence'] = {"filename":"/posts/2017-08-28-to-confidence.md","path":"2017-08-28-to-confidence","date":"2017-08-28","title":"To confidence","img":"posts/2017-08-28-to-confidence.jpg","imgalt":"children playing in the fountain"};

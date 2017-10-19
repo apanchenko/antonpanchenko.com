@@ -60,7 +60,7 @@ fs.readdir('public/posts/', function(err, files) {
     process.exit(1);
   } else {
     files.filter(function(file) {
-      return file.endsWith('.md');
+      return file.endsWith('.md') && !file.endsWith('.draft.md');
     }).forEach(function(file) {
       headers.push(headerFor("posts/" + file));
     });

@@ -4,7 +4,6 @@ House of butterflies
 posts/2017-07-24-house-of-butterflies.jpg
 girl with a butterfly
 
-House of butterflies
 ![girl with a butterfly](posts/2017-07-24-house-of-butterflies.jpg)
 
 Today me and Lu were practicing on bicycle. She still is lazy to

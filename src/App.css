@@ -14,6 +14,13 @@
   margin-bottom: 3em;
 }
 
+.post-md {
+  font-family: 'Merriweather','Georgia','serif';
+  font-size: 1.3em;
+  line-height: 2;
+  word-wrap: break-word;  
+}
+
 .post-md img {
   display: block;
   max-width: 100%;
