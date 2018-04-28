@@ -8,14 +8,14 @@ class BlogListItem extends React.Component {
         return (
             <div className="row">
                 <Link to={"/" + this.props.entry.path}>
+                    <div className="col-xs-8">
+                        <h3 className="post-title">{this.props.entry.title}</h3>
+                    </div>
                     <div className="col-xs-1 post-date">
                             {this.props.entry.date}
                     </div>
                     <div className="col-xs-3 post">
-                        <Image src={this.props.entry.img} alt={this.props.entry.imgalt} responsive />
-                    </div>
-                    <div className="col-xs-8 post">
-                        <h3 className="post-title">{this.props.entry.title}</h3>
+                        <Image src={this.props.entry.img} alt={this.props.entry.imgalt} width='450' height='300' responsive />
                     </div>
                 </Link>
             </div>

@@ -1,5 +1,5 @@
 # apanchenko
-My photo blog and react training sandbox.
+My photo blog and react training.
 
 ## TODO
 - better styles
@@ -7,7 +7,7 @@ My photo blog and react training sandbox.
 - make footer with contacts
 - style post dates. Probably in posts only, after title
 - comments
-- menu?
+- menu
 
 ## Done
 - draft post: *.draft.md

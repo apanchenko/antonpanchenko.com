@@ -1,3 +1,6 @@
+// After build complete copies all built files
+// from 'build' folder to 'out' repository.
+
 var fs = require("fs");
 var path = require("path");
 
