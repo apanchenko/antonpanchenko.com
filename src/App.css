@@ -5,14 +5,18 @@
   color: white;
   margin-bottom: 4em;
 }
-
 .app-title {
   font-size: 1.5em;
 }
 
-.post {
+.card {
   margin-bottom: 3em;
+  border-style: none;
 }
+.card a:link    {color:#000000;}
+.card a:visited {color:#000000;}
+.card a:hover   {color:#000000; text-decoration:none;}
+.card a:active  {color:#000000;}
 
 .post-md {
   font-family: 'Merriweather','Georgia','serif';
@@ -20,13 +24,11 @@
   line-height: 2;
   word-wrap: break-word;  
 }
-
 .post-md img {
   display: block;
   max-width: 100%;
   height: auto;
 }
-
 .post-date {
   padding: 0;
   margin: 0;

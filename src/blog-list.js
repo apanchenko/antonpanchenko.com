@@ -3,20 +3,13 @@ import { Link } from 'react-router-dom';
 import { Image } from 'react-bootstrap';
 import blogidx from './blog-index.js';
 
-class BlogListItem extends React.Component {
+class Card extends React.Component {
     render() {
         return (
-            <div className="row">
+            <div className="card">
                 <Link to={"/" + this.props.entry.path}>
-                    <div className="col-xs-8">
-                        <h3 className="post-title">{this.props.entry.title}</h3>
-                    </div>
-                    <div className="col-xs-1 post-date">
-                            {this.props.entry.date}
-                    </div>
-                    <div className="col-xs-3 post">
-                        <Image src={this.props.entry.img} alt={this.props.entry.imgalt} width='450' height='300' responsive />
-                    </div>
+                    <h3 className="title">{this.props.entry.title}</h3>
+                    <Image src={this.props.entry.img} alt={this.props.entry.imgalt} width="100%" />
                 </Link>
             </div>
         );
@@ -27,18 +20,28 @@ export default class BlogList extends React.Component {
     constructor(props) {
         super(props);
 
-        var items = Object.keys(blogidx).map(function (key) {
-            return <BlogListItem key={key} entry={blogidx[key]} />;
-        }.bind(this));
+        var keys = Object.keys(blogidx);
+        var items = [];
+        for (var i = 0; i < keys.length - 1;)
+        {
+            var key1 = keys[i++];
+            var key2 = keys[i++];
+            items.push(
+                <div className="row">
+                    <div className="col-md-6">
+                        <Card  key={key1} entry={blogidx[key1]} />
+                    </div>
+                    <div className="col-md-6">
+                        <Card  key={key2} entry={blogidx[key2]} />
+                    </div>
+                </div>
+            )
+        }
 
-        this.state = {
-            items: items,
-        };
+        this.state = { items: items };
     }
 
     render() {
-        return (
-           this.state.items
-        );
+        return ( this.state.items );
     }
 };
