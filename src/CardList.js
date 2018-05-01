@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Image } from 'react-bootstrap';
-import blogidx from './blog-index.js';
+import list from './list.js';
 
 class Card extends React.Component {
     render() {
@@ -20,7 +20,7 @@ export default class CardList extends React.Component {
     constructor(props) {
         super(props);
 
-        var keys = Object.keys(blogidx);
+        var keys = Object.keys(list);
         var items = [];
         for (var i = 0; i < keys.length - 1;)
         {
@@ -29,10 +29,10 @@ export default class CardList extends React.Component {
             items.push(
                 <div className="row">
                     <div className="col-md-6">
-                        <Card  key={key1} entry={blogidx[key1]} />
+                        <Card  key={key1} entry={list[key1]} />
                     </div>
                     <div className="col-md-6">
-                        <Card  key={key2} entry={blogidx[key2]} />
+                        <Card  key={key2} entry={list[key2]} />
                     </div>
                 </div>
             )

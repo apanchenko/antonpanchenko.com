@@ -1,6 +1,6 @@
 import React from 'react';
 import Ajax from './ajax.js';
-import blogidx from './blog-index.js';
+import list from './list.js';
 
 var md = require('markdown-it')();
 
@@ -10,7 +10,7 @@ export default class BlogEntry extends React.Component {
         super(props);
 
         this.state = {
-            entry: blogidx[this.props.match.params.id],
+            entry: list[this.props.match.params.id],
             __html: ""
         };
     }

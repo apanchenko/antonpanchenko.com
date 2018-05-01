@@ -35,17 +35,17 @@ function writeToIndex(headers) {
     return a.path < b.path;
   });
 
-  var index  = "var index = [];\n";
+  var index  = "var list = [];\n";
 
   headers.forEach(function(header) {
-    index += "index['" + header.path + "'] = " + JSON.stringify(header) + ";\n";
+    index += "list['" + header.path + "'] = " + JSON.stringify(header) + ";\n";
     index += "\n";
   });
 
   index += "\n";
-  index += "module.exports = index;\n";
+  index += "module.exports = list;\n";
 
-  fs.writeFile('src/blog-index.js', index, function(err) {
+  fs.writeFile('src/list.js', index, function(err) {
     if (err) { console.log("err -> " + err); }
   });
 }
