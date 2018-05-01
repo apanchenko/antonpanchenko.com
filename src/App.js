@@ -5,7 +5,7 @@ import {
   Switch
 } from 'react-router-dom';
 import './App.css';
-import BlogList from './blog-list.js';
+import CardList from './CardList.js';
 import BlogEntry from './blog-entry.js';
 import { Grid } from 'react-bootstrap';
 
@@ -22,7 +22,7 @@ export default class App extends Component {
         <Grid>
           <Router>
             <Switch>
-              <Route path="/" exact component={BlogList} />
+              <Route path="/" exact component={CardList} />
               <Route path="/:id" component={BlogEntry} />
             </Switch>
           </Router>

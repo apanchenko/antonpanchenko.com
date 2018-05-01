@@ -16,7 +16,7 @@ class Card extends React.Component {
     }
 };
 
-export default class BlogList extends React.Component {
+export default class CardList extends React.Component {
     constructor(props) {
         super(props);
 
