@@ -1,5 +1,4 @@
 2017-08-28-to-confidence
-2017-08-28
 To confidence
 children playing in the fountain
 

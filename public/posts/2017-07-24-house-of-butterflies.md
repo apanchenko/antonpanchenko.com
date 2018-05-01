@@ -1,5 +1,4 @@
 2017-07-24-house-of-butterflies
-2017-07-24
 House of butterflies
 girl with a butterfly
 

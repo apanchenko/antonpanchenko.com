@@ -15,15 +15,14 @@ function headerFor(filename) {
 
       readerFor("public/" + filename).on('line', function (line) {
         ++lineCount;
-        if (lineCount < 5) {
+        if (lineCount < 4) {
           header.push(line);
-        } else if (lineCount === 5) {
+        } else if (lineCount === 4) {
           resolve({
             filename : "/" + filename,
             path     : header[0],
-            date     : header[1],
-            title    : header[2],
-            imgalt   : header[3]
+            title    : header[1],
+            imgalt   : header[2]
           });
         }
       });
@@ -33,7 +32,7 @@ function headerFor(filename) {
 
 function writeToIndex(headers) {
   headers = headers.sort(function(a, b) {
-    return (new Date(b.date).getTime() - new Date(a.date).getTime());
+    return a.path < b.path;
   });
 
   var index  = "var index = [];\n";

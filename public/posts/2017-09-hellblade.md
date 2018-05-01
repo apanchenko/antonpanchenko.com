@@ -1,5 +1,4 @@
 2017-09-Hellblade
-2017-09
 Hellblade
 girl with tiger paw
 
