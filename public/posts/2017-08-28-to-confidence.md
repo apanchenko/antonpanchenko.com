@@ -1,7 +1,6 @@
 2017-08-28-to-confidence
 2017-08-28
 To confidence
-posts/2017-08-28-to-confidence.jpg
 children playing in the fountain
 
 ![children playing in the fountain](posts/2017-08-28-to-confidence.jpg)

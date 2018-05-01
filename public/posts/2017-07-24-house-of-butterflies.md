@@ -1,7 +1,6 @@
 2017-07-24-house-of-butterflies
 2017-07-24
 House of butterflies
-posts/2017-07-24-house-of-butterflies.jpg
 girl with a butterfly
 
 ![girl with a butterfly](posts/2017-07-24-house-of-butterflies.jpg)

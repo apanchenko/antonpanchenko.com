@@ -9,7 +9,7 @@ class Card extends React.Component {
             <div className="card">
                 <Link to={"/" + this.props.entry.path}>
                     <h3 className="title">{this.props.entry.title}</h3>
-                    <Image src={this.props.entry.img} alt={this.props.entry.imgalt} />
+                    <Image src={'posts/'+this.props.entry.path+'.jpg'} alt={this.props.entry.imgalt} />
                 </Link>
             </div>
         );

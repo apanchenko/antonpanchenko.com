@@ -1,7 +1,6 @@
 2017-09-Hellblade
 2017-09
 Hellblade
-posts/2017-09-hellblade.jpg
 girl with tiger paw
 
 ![girl with tiger paw](posts/2017-09-hellblade.jpg)

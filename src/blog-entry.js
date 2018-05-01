@@ -16,7 +16,7 @@ export default class BlogEntry extends React.Component {
     }
 
     chopHeader(markdown) {
-        return markdown.split('\n').slice(6).join('\n');
+        return markdown.split('\n').slice(5).join('\n');
     }
 
     loadMarkdown() {
