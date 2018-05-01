@@ -2,7 +2,7 @@
 Hellblade
 girl with tiger paw
 
-![girl with tiger paw](posts/2017-09-hellblade.jpg)
+![girl with tiger paw](/posts/2017-09-hellblade.jpg)
 
 [Hellblade](https://youtu.be/26LMuf3Ox_4?t=7m41s) is
 [incredible](https://youtu.be/Q9bBTwCWa34).

@@ -2,7 +2,7 @@
 ML update
 orca show
 
-![orca show](posts/2017-10-06-pip-update.jpg)
+![orca show](/posts/2017-10-06-pip-update.jpg)
 
 I came back to my ML exercises after few inactive months. First of all I decided to update all packages:
 ```

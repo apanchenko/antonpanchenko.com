@@ -23,7 +23,7 @@ export default class App extends Component {
           <Router>
             <Switch>
               <Route path="/" exact component={CardList} />
-              <Route path="/:id" component={BlogEntry} />
+              <Route path="/:id/" component={BlogEntry} />
             </Switch>
           </Router>
         </Grid>

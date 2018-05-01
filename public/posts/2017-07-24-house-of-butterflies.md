@@ -2,7 +2,7 @@
 House of butterflies
 girl with a butterfly
 
-![girl with a butterfly](posts/2017-07-24-house-of-butterflies.jpg)
+![girl with a butterfly](/posts/2017-07-24-house-of-butterflies.jpg)
 
 Today me and Lu were practicing on bicycle. She still is lazy to
 ride by herself, so I hold the seat all the time. After that I took a chance to skateboard a little
