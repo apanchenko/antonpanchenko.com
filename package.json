@@ -4,14 +4,15 @@
   "private": true,
   "dependencies": {
     "markdown-it": "^8.4.0",
-    "react": "^16.0.0",
+    "react": "16.3.2",
     "react-bootstrap": "^0.31.3",
-    "react-dom": "^16.0.0",
+    "react-dom": "16.3.2",
     "react-router-dom": "^4.2.2",
-    "react-scripts": "1.0.14"
+    "react-scripts": "1.0.14",
+    "sharp": "0.20.2"
   },
   "scripts": {
-    "index": "node src/gen-blog-index.js",
+    "generate": "node src/generate.js",
     "start": "react-scripts start",
     "build": "react-scripts build && node out.js",
     "test": "react-scripts test --env=jsdom",

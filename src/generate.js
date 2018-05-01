@@ -1,5 +1,6 @@
 var fs       = require('fs');
 var readline = require('readline');
+var sharp    = require('sharp');
 
 function readerFor(filename) {
   return readline.createInterface({
@@ -38,6 +39,10 @@ function writeToIndex(headers) {
   var index  = "var list = [];\n";
 
   headers.forEach(function(header) {
+    sharp('public/posts/' + header.path + '.jpg')
+      .resize(540, 360, {kernel: sharp.kernel.nearest})
+      .toFile('public/min/' + header.path + '.jpg')
+
     index += "list['" + header.path + "'] = " + JSON.stringify(header) + ";\n";
     index += "\n";
   });
