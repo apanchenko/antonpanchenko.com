@@ -1,15 +1,18 @@
 # apanchenko
-My photo blog and react training.
+Photogallery, blog, react training.
 
-## TODO
-- better styles
+## todo
 - embed video
 - make footer with contacts
-- style post dates. Probably in posts only, after title
 - comments
 - menu
+- shadows and hover for cards
+- photogallery
+- tags
 
-## Done
+## done
 - draft post: *.draft.md
 - normalize image size
 - update readme
+- better styles
+- style post dates. Probably in posts only, after title
