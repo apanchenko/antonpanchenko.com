@@ -1,0 +1,1 @@
+@git archive -9 -o ../%DATE%-antonpanchenko.com.zip HEAD

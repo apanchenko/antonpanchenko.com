@@ -1,17 +1,21 @@
 import React from 'react';
 import Ajax from './ajax.js';
 import list from './list.js';
+import Helmet from "react-helmet";
 
 var md = require('markdown-it')();
-
 
 export default class BlogEntry extends React.Component {
     constructor(props) {
         super(props);
-
+        var entry = list[this.props.match.params.id];
         this.state = {
-            entry: list[this.props.match.params.id],
-            __html: ""
+            filename:   entry.filename,
+            path:       entry.path,
+            title:      entry.title,
+            imgalt:     entry.imgalt,
+            description:entry.description,
+            __html:     ""
         };
     }
 
@@ -21,7 +25,7 @@ export default class BlogEntry extends React.Component {
 
     loadMarkdown() {
         Ajax.get(
-            this.state.entry.filename,
+            this.state.filename,
             function (markdown) {
                 this.setState({ __html: md.render(this.chopHeader(markdown)) });
             }.bind(this)
@@ -36,7 +40,14 @@ export default class BlogEntry extends React.Component {
     render() {
         return (
             <div className="blogEntryBox">
-                <h1>{this.state.entry.title}</h1>
+                <Helmet>
+                    <meta property="og:url" content={document.URL}/>
+                    <meta property="og:type" content="article" />
+                    <meta property="og:title" content={this.state.title} />
+                    <meta property="og:description" content={this.state.description} />
+                    <meta property="og:image" content={document.location.origin + '/min/' + this.state.path + '.jpg'} />
+                </Helmet> 
+                <h1>{this.state.title}</h1>
                 <div className="post-md" dangerouslySetInnerHTML={this.state} />
             </div>
         );

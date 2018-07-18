@@ -16,14 +16,15 @@ function headerFor(filename) {
 
       readerFor("public/" + filename).on('line', function (line) {
         ++lineCount;
-        if (lineCount < 4) {
+        if (lineCount < 5) {
           header.push(line);
-        } else if (lineCount === 4) {
+        } else if (lineCount === 5) {
           resolve({
             filename : "/" + filename,
             path     : header[0],
             title    : header[1],
-            imgalt   : header[2]
+            imgalt   : header[2],
+            description: header[3]
           });
         }
       });
@@ -32,13 +33,12 @@ function headerFor(filename) {
 }
 
 function writeToIndex(headers) {
-  headers = headers.sort(function(a, b) {
-    return a.path < b.path;
-  });
+  headers.reverse();
 
   var index  = "var list = [];\n";
 
   headers.forEach(function(header) {
+    console.log('  ' + header.path);
     sharp('public/posts/' + header.path + '.jpg')
       .resize(540, 360, {kernel: sharp.kernel.nearest})
       .toFile('public/min/' + header.path + '.jpg')
@@ -62,11 +62,9 @@ fs.readdir('public/posts/', function(err, files) {
     console.log("err -> " + err);
     process.exit(1);
   } else {
-    files.filter(function(file) {
-      return file.endsWith('.md') && !file.endsWith('.draft.md');
-    }).forEach(function(file) {
-      headers.push(headerFor("posts/" + file));
-    });
+    files
+      .filter(function(file) {return file.endsWith('.md') && !file.endsWith('.draft.md');})
+      .forEach(function(file) {headers.push(headerFor("posts/" + file));});
     Promise.all(headers).then(function(vals) {
       writeToIndex(vals);
     });

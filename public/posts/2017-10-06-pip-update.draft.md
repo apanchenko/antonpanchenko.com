@@ -1,6 +1,7 @@
 2017-10-06-pip-update
 ML update
 orca show
+Notes about my machine learning learning
 
 ![orca show](/posts/2017-10-06-pip-update.jpg)
 

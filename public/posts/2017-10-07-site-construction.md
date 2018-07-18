@@ -1,6 +1,7 @@
 2017-10-07-site-construction
 Site construction
 construction of Zaryadye park in Moscow
+Several words about building this site
 
 ![construction of Zaryadye park in Moscow](/posts/2017-10-07-site-construction.jpg)
 
