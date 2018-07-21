@@ -2,6 +2,7 @@
 Photogallery, blog, react training.
 
 ## todo
+- social sharing: make articles as separate pages
 - embed video
 - make footer with contacts
 - comments
