@@ -1,5 +1,34 @@
 # Цитаты
 
+## Тревожные люди - Фредрик Бакман
+
+- человек всегда лучше, чем сумма его недостатков.
+- мы не хотим, чтобы у наших детей были свои мечты, и не хотим, чтобы дети пошли по нашим стопам. Мы сами хотим идти по их стопам, когда они воплощают наши мечты в жизнь
+- Случился финансовый кризис и обрушил банки, хотя на самом деле рухнули людские судьбы.
+- если по ту сторону забора трава кажется зеленее, значит, там просто полно навоза
+- большинство людей гораздо больше хотят быть богатыми, чем счастливыми
+- это так романтично – развестись в пожилом возрасте
+- если ты покупаешь квартиру без малейших изъянов, а жизнь все равно не складывается, значит, виноват ты сам
+
+2024-01
+
+## Пиши, сокращай - Максим Ильяхов
+
+- Лучше просто об умном, чем сложно о ерунде.
+- если заглянуть поглубже, то, конечно, откроется много иных вещей; но весьма опасно заглядывать поглубже в дамские сердца
+- Никогда не соглашайтесь ничего сглаживать, смягчать и делать более политкорректным, пока не разберетесь, чьи интересы вы защищаете.
+- Как говорил Майлз Дэвис: «Дело не в тех в нотах, которые звучат. Дело в тех, которые не звучат».
+- Обманщик исходит из того, что его жертва ничего не знает о мире.
+- Слова — лишь тонкая обертка вокруг смысла. Слова не должны нести самостоятельную ценность.
+
+2023-12
+
+## Максим и Фёдор - Владимир Шинкарёв
+
+- Василий принес бормотуху, а Петр косорыловку. Делали коктейли. Прилично вышло.
+
+2023-11
+
 ## KGBT+ - Виктор Олегович Пелевин
 
 - передо мной всего лишь мертвый индус из семнадцатой дивизии — англичане, как обычно, сумели заставить одних азиатов убивать других
@@ -29,7 +58,7 @@
 
 - Культура, – говорил он, – это не количество прочитанных книг, а количество понятых.
 - Если б вы были настоящими мужчинами, с Россией не случилось бы то, что случилось! Стало ужасно тихо. Мама, прижав ладони к щекам, умоляюще смотрела на отца широко распахнутыми глазами.
-- Какой же русский человек, – отвечает он, – ходит в баню, не запасясь водкой? Вы, наверное, турок, Виктор Максимович. Недаром вы откуда-то с Кавказа.
+- Какой же русский человек, – отвечает он, – ходит в баню, не запасясь водкой? Вы, наверное, турок, Виктор Максимович.
 - Он был выше среднего роста, имел красивые правильные черты лица, и только в его больших, голубых, как бы теоретически плачущих глазах застыл тоскливый идиотизм ожидания справедливости.
 - Идеология – страшная вещь, и мы ее недооцениваем.
 - Но идеология, разделив людей на исторически полноценных и неполноценных, разрушила в человеке универсальность и цельность нравственного чувства.
@@ -98,6 +127,29 @@
 
 2021-05
 
+## Непобедимое солнце. - Виктор Олегович Пелевин
+
+- надо выбирать: или молоко с сыром, или говядина. Вместе это как-то безвкусно
+
+2020-10
+
+## Педагогическая поэма - Антон Семенович Макаренко
+
+- Действуй! Дело святое!
+- теорию нужно извлечь из всей суммы реальных явлений, происходящих на моих глазах
+- немедленный анализ и немедленное действие
+- В природе, знаешь, все так хорошо устроено, что и человек на что-нибудь пригодится.
+- Задоров, как всегда, спокойно и уверенно улыбался; он умел все делать, не растрачивая своей личности и не обращая в пепел ни одного грамма своего существа.
+- Вылиталы орлы З-за крутой горы, Вылиталы, гуркоталы, Роскоши шукалы.
+- полнейшем игнорировании прошлого и тем более прошлых преступлений
+- Знаешь, голубе, жизнь, так она вроде бабы: от нее справедливости не ожидай.
+- И потом баба все-таки: теорехтически женськое равноправие, а прахтически как была бабой, так и осталась…
+- Ольга правильно говорит: должны – значит, нужно взять и заставить…
+- Вин же «правды шукае». Вы бачилы такого дурня? Ему правда нужна! Он правдою будет чоботы мазать.
+- А что ж ты еще умеешь делать? Ты – хлебный токарь.
+
+2020-01.
+
 ## iКона: Стив Джобс. - Джеффри С. Янг
 
 - Есть ли что-то в этом мире, чего вы не понимаете?
@@ -115,3 +167,24 @@
 - компания Apple создала такие условия, когда руководитель отдела информационных технологий не сможет не предпочесть технологии именно этой
 
 2019-11
+
+## Women - Charles Bukowski
+
+- The greatest men are the most alone.
+- You made an ass out of yourself. You generally always make an ass out of yourself.
+- I thought, one minute I've got two women and the next I've got none.
+- Her mental deficiency was attractive to me because she didn't play games.
+- "Potential," I said, "doesn't mean a thing. You've got to do it. Almost every baby in a crib has more potential than I have."
+- Time was motionless while existence was a throbbing unbearable thing. I waited. I waited. I waited. I waited. Finally it was 6 am. I walked to the corner to the liquor store.
+- "Cut the shit!" I said.
+- Nothing to drink, no job, just the walls, sitting there staring at the walls and thinking.
+- Goodness could be found sometimes in the middle of hell.
+- The Heart Is a Lonely Hunter.
+- "There are two women.""There usually are," I said."All right," said the first cop. "I just want to ask you one question.""O.K.""Which of the two women do you want?"
+- Katherine knew that there was something about me that was not wholesome in the sense of wholesome is as wholesome does.
+- education helped when you were looking at a menu or for a job, especially when you were looking at a menu
+- I had on my dead father's overcoat, which was too large. My pants were too long, the cuffs came down over the shoes and that was good because my stockings didn't match, and my shoes were down at the heels. I hated barbers so I cut my own hair when I couldn't get a woman to do it. I didn't like to shave and I didn't like long beards, so I scissored myself every two or three weeks.
+- People were usually much better in their letters than in reality. They were much like poets in this way.
+- But then if you lied to a man about his talent just because he was sitting across from you, that was the most unforgivable lie of them all, because that was telling him to go on, to continue which was the worst way for a man without real talent to waste his life, finally. But many people did just that, friends and relatives mostly.
+
+2018-09
