@@ -187,9 +187,19 @@
 - Человек, не способный изменить свое мнение, – узник своего прошлого.
 - что дизайн – это то, как продукт работает
 - Эйснер рассказывал, что его отец требовал, чтобы он «на протяжении двух часов читал книги за каждый час просмотра телевизионных программ».
-- компания Apple создала такие условия, когда руководитель отдела информационных технологий не сможет не предпочесть технологии именно этой
 
 2019-11
+
+## Dual Momentum Investing - Gary Antonacci
+
+- Warren Buffett says that risk comes from not knowing what you are doing.
+- The purpose of studying economics is not to acquire a set of ready-made answers to economic questions, but to learn to avoid being deceived by economists.
+- It ain’t what we don’t know that gets us in trouble. It’s what we know for sure that just ain’t so.
+- We are prone to overestimate how much we understand about the world and to underestimate the role of chance in events.
+- Diversification is protection against ignorance. Wide diversification is only required when investors do not understand what they are doing.
+- Investing is simple but not easy
+
+2019-07
 
 ## Blood, Sweat, and Pixels - Jason Schreier
 
